@@ -11,4 +11,4 @@ def index(tipo):
        abort(403, f"O tipo {tipo} não é permitido neste endpoint.")
 
 if __name__ == '__main__':
- app.run(debug=True, port=5001)
+ app.run(debug=True, host='192.168.15.64', port=5001)
