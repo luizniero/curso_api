@@ -23,7 +23,8 @@ def index():
 
 @app.route('/lugares')
 def lugares():
- lista_lugares = endpoint.retorna_lugares()
+ #lista_lugares = endpoint.retorna_lugares()
+ lista_lugares = endpoint.obtem_dados_api(endpoint.url_lugares)
  return f'''
     <title> Mini curso de API com Python Flask </title>
     <body>
@@ -40,7 +41,8 @@ def lugares():
 
 @app.route('/livros')
 def livros():
- lista_livros = endpoint.retorna_livros()
+ #lista_livros = endpoint.retorna_livros()
+ lista_livros = endpoint.obtem_dados_api(endpoint.url_livros)
  return f'''
     <title> Mini curso de API com Python Flask </title>
     <body>
@@ -57,11 +59,12 @@ def livros():
 
 @app.route('/disciplinas')
 def disciplinas():
- lista_disciplinas = endpoint.retorna_disciplinas()
+ #lista_disciplinas = endpoint.retorna_disciplinas()
+ lista_disciplinas = endpoint.obtem_dados_api(endpoint.url_disciplinas)
  return f'''
     <title> Mini curso de API com Python Flask </title>
     <body>
-    <h1> Livros </h1>
+    <h1> Disciplinas </h1>
         <ul>
             <li>{lista_disciplinas[0]}</li>
             <li>{lista_disciplinas[1]}</li>
